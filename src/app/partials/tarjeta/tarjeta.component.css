@@ -1,0 +1,16 @@
+.card  {
+    background-color:coral;
+
+    
+}
+
+.card{
+   width: 100px;
+   padding: 25px;
+   margin: 10px;
+display: inline-block;
+}
+
+.tarjetas{
+    display: inline-block;
+}
