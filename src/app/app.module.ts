@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './partials/header/header.component';
 import { SidebarComponent } from './partials/sidebar/sidebar.component';
 import { TarjetaComponent } from './partials/tarjeta/tarjeta.component';
+import { PaginaEstudianteComponent } from './partials/paginas/pagina-estudiante/pagina-estudiante.component';
+
+
 
 
 @NgModule({
@@ -14,6 +17,9 @@ import { TarjetaComponent } from './partials/tarjeta/tarjeta.component';
     HeaderComponent,
     SidebarComponent,
     TarjetaComponent,
+    PaginaEstudianteComponent,
+    
+
     
   ],
   imports: [
