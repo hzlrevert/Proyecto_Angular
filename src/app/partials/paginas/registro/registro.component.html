@@ -7,16 +7,27 @@
                     <div class="col-6">
                         <label for="firstName">Nombre</label>
                         <input [formControl]="firstNameControl" class="form-control" type="text"/> 
+                        <small *ngIf="firstNameControl.errors?.['required']"> campo obligatorio</small>
 
                     </div>
                     <div class="col-6">
                         <label for="lastName">Apellido</label>
                         <input [formControl]="lastNameControl" class="form-control" type="text"/> 
+                        <small *ngIf="lastNameControl.errors?.['required']"> campo obligatorio</small>
                     </div>
                     <div class="col-6">
                         <label for="lastName">Contraseña</label>
                         <input [formControl]="passControl" class="form-control" type="text"/> 
+                        <small *ngIf="passControl.errors?.['required']"> pass no valida</small>
+                        <small *ngIf="passControl.errors?.['minlength']"> pass no valida</small>
+                        <small *ngIf="passControl.errors?.['maxlength']"> pass no valida</small>
                         {{passControl.errors | json}}
+                    </div>
+                    <div class="col-6">
+                        <label for="lastName">Email</label>
+                        <input [formControl]="emailControl" class="form-control" type="text"/> 
+                        <small *ngIf="emailControl.errors?.['email']"> mail no valid</small>
+                        {{emailControl.errors | json}}
                     </div>
                     <div>
                        {{registerForm.value | json}} 

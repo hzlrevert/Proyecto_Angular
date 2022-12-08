@@ -14,11 +14,13 @@ export class RegistroComponent {
 firstNameControl = new FormControl('Nombre', [Validators.required])
 lastNameControl = new FormControl('Apellido', [Validators.required])
 passControl = new FormControl('Contraseña', [Validators.required, Validators.minLength(8), Validators.maxLength(10)  ] )
+emailControl = new FormControl('Email', [Validators.required, Validators.email] )
 
 
 registerForm = new FormGroup({
   firstName: this.firstNameControl,
   lastName: this.lastNameControl,
   pass: this.passControl,
+  email: this.emailControl,
 })
 }
