@@ -23,4 +23,13 @@ registerForm = new FormGroup({
   pass: this.passControl,
   email: this.emailControl,
 })
+
+
+
+onSubmit(){
+console.log(this.registerForm.value)
+}
+
+
+
 }

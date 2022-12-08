@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Formulario de registro</h5>
-                <form [formGroup]="registerForm" class="row g-3">
+                <form [formGroup]="registerForm" class="row g-3" (ngSubmit)="onSubmit">
                     <div class="col-6">
                         <label for="firstName">Nombre</label>
                         <input [formControl]="firstNameControl" class="form-control" type="text"/> 
@@ -31,6 +31,10 @@
                     </div>
                     <div>
                        {{registerForm.value | json}} 
+                    </div>
+
+                    <div class="col-12 d-flex justify-content-end">
+                        <button class="btn btn-primary" type="submit">Enviar</button>
                     </div>
                 </form>
             </div>
