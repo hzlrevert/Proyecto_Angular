@@ -1,0 +1,28 @@
+<main >
+    <div class="conteiner">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Formulario de registro</h5>
+                <form [formGroup]="registerForm" class="row g-3">
+                    <div class="col-6">
+                        <label for="firstName">Nombre</label>
+                        <input [formControl]="firstNameControl" class="form-control" type="text"/> 
+
+                    </div>
+                    <div class="col-6">
+                        <label for="lastName">Apellido</label>
+                        <input [formControl]="lastNameControl" class="form-control" type="text"/> 
+                    </div>
+                    <div class="col-6">
+                        <label for="lastName">Contraseña</label>
+                        <input [formControl]="passControl" class="form-control" type="text"/> 
+                        {{passControl.errors | json}}
+                    </div>
+                    <div>
+                       {{registerForm.value | json}} 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

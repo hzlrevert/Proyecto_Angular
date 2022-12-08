@@ -7,6 +7,8 @@ import { HeaderComponent } from './partials/header/header.component';
 import { SidebarComponent } from './partials/sidebar/sidebar.component';
 import { TarjetaComponent } from './partials/tarjeta/tarjeta.component';
 import { PaginaEstudianteComponent } from './partials/paginas/pagina-estudiante/pagina-estudiante.component';
+import { RegistroComponent } from './partials/paginas/registro/registro.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -18,13 +20,15 @@ import { PaginaEstudianteComponent } from './partials/paginas/pagina-estudiante/
     SidebarComponent,
     TarjetaComponent,
     PaginaEstudianteComponent,
+    RegistroComponent,
     
 
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
