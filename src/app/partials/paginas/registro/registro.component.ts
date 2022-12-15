@@ -11,10 +11,10 @@ import{FormControl, FormGroup, Validators } from'@angular/forms';
 })
 export class RegistroComponent {
 
-firstNameControl = new FormControl('Nombre', [Validators.required])
-lastNameControl = new FormControl('Apellido', [Validators.required])
-passControl = new FormControl('Contraseña', [Validators.required, Validators.minLength(8), Validators.maxLength(10)  ] )
-emailControl = new FormControl('Email', [Validators.required, Validators.email] )
+firstNameControl = new FormControl('', [Validators.required])
+lastNameControl = new FormControl('', [Validators.required])
+passControl = new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(10)  ] )
+emailControl = new FormControl('', [Validators.required, Validators.email] )
 
 
 registerForm = new FormGroup({
@@ -27,7 +27,8 @@ registerForm = new FormGroup({
 
 
 onSubmit(){
-console.log(this.registerForm.value)
+console.log(this.registerForm.value);
+  this.registerForm.reset();
 }
 
 
